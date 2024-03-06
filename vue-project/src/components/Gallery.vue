@@ -120,6 +120,7 @@ const photos = ref([
 
 .preview-list a.active-item::before {
   background-color: transparent;
+  transition: background-color 0.5s ease;
 }
 
 .preview-list img {
