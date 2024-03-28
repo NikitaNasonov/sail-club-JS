@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Article from './Article.vue'
 
 const shortArticle1 = ref(true)
 const shortArticle2 = ref(true)
@@ -14,18 +15,22 @@ function moreText(numArticle) {
   <article class="blog-article blog-article-1" :class="{ short : shortArticle1}">
     <div class="blog-article-content">
       <p class="blog-article-date"><time datetime="2021-10-20">20 октября</time> - <time datetime="2021-04-19">19 апреля</time></p>
-      <h2>Стань частью команды</h2>
-      <p class="blog-article-description">Если вы давно хотели попробовать себя в яхтинге – сейчас самое лучшее время! Мы набираем команду будущих шкиперов. За 6 вы станете настоящим капитаном и уже в следующем сезоне сможете самостоятельно выйти в море!</p>
-      <button class="more" type="button" @click="moreText(1)">Читать дальше</button>
+      <Article
+        title="Стань частью команды"
+        description="Если вы давно хотели попробовать себя в яхтинге – сейчас самое лучшее время! Мы набираем команду будущих шкиперов. За 6 вы станете настоящим капитаном и уже в следующем сезоне сможете самостоятельно выйти в море!"
+        @click-button="moreText(1)"
+      />
     </div>
     <img class="blog-article-img" src="../assets/img/blog-photo-1.jpg" width="600" height="262" alt="Мужчина на яхте смотрит в бинокль">
   </article>
   <article class="blog-article blog-article-2" :class="{ short : shortArticle2}">
     <div class="blog-article-content">
       <p class="blog-article-date"><time datetime="2021-07-16">16 июля</time> - <time datetime="2021-07-23">23 июля</time></p>
-      <h2>Рожденные в воде</h2>
-      <p class="blog-article-description">Подарите детям настоящее приключение! День с морскими пиратами на корабле – это лучшая команда, веселые аниматоры, игры, соревнования, работа в команде и, конечно, море!</p>
-      <button class="more" type="button" @click="moreText(2)">Читать дальше</button>
+      <Article
+        title="Рожденные в воде"
+        description="Подарите детям настоящее приключение! День с морскими пиратами на корабле – это лучшая команда, веселые аниматоры, игры, соревнования, работа в команде и, конечно, море!"
+        @click-button="moreText(2)"
+      />
     </div>
     <img class="blog-article-img" src="../assets/img/blog-photo-2.jpg" width="600" height="252" alt="Дети и взрослые на яхте">
   </article>
