@@ -25,7 +25,6 @@ function changeFont(font) {
     document.body.classList.add('serif')
   )
 }
-
 </script>
 
 <template>
@@ -54,7 +53,7 @@ function changeFont(font) {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .services {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -80,14 +79,13 @@ function changeFont(font) {
   background-image: url("../assets/img/pin.svg");
   background-repeat: no-repeat;
   background-position: left center;
-}
 
-.location:hover {
-  opacity: 0.5;
-}
-
-.location:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .caption {
@@ -106,14 +104,14 @@ function changeFont(font) {
   margin-right: 30px;
   display: flex;
   flex-wrap: wrap;
-}
-
-.theme-switcher li {
-  margin-right: 10px;
-}
-
-.theme-switcher li:last-child {
-  margin-right: 0;
+  
+  li {
+    margin-right: 10px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .theme-button-light {
@@ -128,18 +126,16 @@ function changeFont(font) {
   border: 1px solid #00c6bd;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.theme-button-light:hover {
-  opacity: 0.5;
-}
-
-.theme-button-light:active {
-  opacity: 0.3;
-}
-
-.theme-button-light.active {
-  background-image: url("../assets/img/sun-light.svg");
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &.active {
+    background-image: url("../assets/img/sun-light.svg");
+  }
 }
 
 .theme-button-dark {
@@ -154,18 +150,16 @@ function changeFont(font) {
   border: 1px solid #00c6bd;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.theme-button-dark:hover {
-  opacity: 0.5;
-}
-
-.theme-button-dark:active {
-  opacity: 0.3;
-}
-
-.theme-button-dark.active {
-  background-image: url("../assets/img/moon-light.svg");
+  &hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &.active {
+    background-image: url("../assets/img/moon-light.svg");
+  }
 }
 
 .fonts {
@@ -174,14 +168,14 @@ function changeFont(font) {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-}
 
-.fonts li {
-  margin-right: 10px;
-}
+  li {
+    margin-right: 10px;
 
-.fonts li:last-child {
-  margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .font-button-sans-serif {
@@ -195,14 +189,13 @@ function changeFont(font) {
   border: 1px solid #00c6bd;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.font-button-sans-serif:hover {
-  opacity: 0.5;
-}
-
-.font-button-sans-serif:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .font-button-serif {
@@ -217,13 +210,12 @@ function changeFont(font) {
   border: 1px solid #00c6bd;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.font-button-serif:hover {
-  opacity: 0.5;
-}
-
-.font-button-serif:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 </style>

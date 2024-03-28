@@ -1,28 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import arrLinks from '../assets/footer-links.json'
 
-const topics = ref([
-  {
-    id: 1,
-    title: "Компания",
-    links: ["О нас", "Команда", "Новости", "Блог", "Галерея"]
-  },
-  {
-    id: 2,
-    title: "Яхт-клуб",
-    links: ["Правила", "Стоимость", "Анкета", "FAQ", "Партнеры"]
-  },
-  {
-    id: 3,
-    title: "Услуги",
-    links: ["Аренда яхты", "Свадьба на яхте", "День рождения", "Бизнес-встречи", "Прогулки"]
-  },
-  {
-    id: 4,
-    title: "Регаты",
-    links: ["Корпоративные регаты", "Календарь мероприятий", "Стать участником", "Результаты регат", "Обучение"]
-  }
-])
+const topics = ref(arrLinks);
 </script>
 
 <template>
@@ -47,16 +27,7 @@ const topics = ref([
   </div>
 </template>
 
-<style>
-.main-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-top: 120px;
-  font-size: 10px;
-  line-height: 12px;
-  border-top: 1px solid rgba(22, 49, 82, 0.1);
-}
-
+<style lang="scss">
 .footer-container {
   width: 1170px;
   margin: 0 auto;
@@ -67,12 +38,6 @@ const topics = ref([
 
 .footer-column {
   width: 175px;
-}
-
-.main-footer .logo {
-  width: 100px;
-  height: 106px;
-  margin-bottom: 30px;
 }
 
 .footer-navigation-topics {
@@ -88,14 +53,14 @@ const topics = ref([
 
 .footer-navigation-topic {
   width: 165px;
-}
 
-.footer-navigation-topic h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 }
 
 .footer-navigation {
@@ -106,41 +71,41 @@ const topics = ref([
 
 .footer-navigation-item {
   margin-bottom: 12px;
-}
 
-.footer-navigation-item:last-child {
-  margin-bottom: 0;
-}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-.footer-navigation-item a {
-  color: #163152;
-  text-decoration: none;
-}
+  a {
+    color: #163152;
+    text-decoration: none;
 
-.footer-navigation-item a:hover {
-  color: rgba(22, 49, 82, 0.5);
-}
+    &:hover {
+      color: rgba(22, 49, 82, 0.5);
+    }
 
-.footer-navigation-item a:active {
-  color: rgba(22, 49, 82, 0.3);
+    &:active {
+      color: rgba(22, 49, 82, 0.3);
+    }
+  }
 }
 
 .policy {
   margin: 0;
   margin-bottom: 8px;
-}
 
-.policy a {
-  color: #163152;
-  text-decoration: none;
-}
+  a {
+    color: #163152;
+    text-decoration: none;
 
-.policy a:hover {
-  color: rgba(22, 49, 82, 0.5);
-}
+    &:hover {
+      color: rgba(22, 49, 82, 0.5);
+    }
 
-.policy a:active {
-  color: rgba(22, 49, 82, 0.3);
+    &:active {
+      color: rgba(22, 49, 82, 0.3);
+    }
+  }
 }
 
 .copyright {

@@ -8,7 +8,6 @@ const shortArticle2 = ref(true)
 function moreText(numArticle) {
   numArticle === 1 ? shortArticle1.value = false : shortArticle2.value = false
 }
-
 </script>
 
 <template>
@@ -32,7 +31,7 @@ function moreText(numArticle) {
   </article>
 </template>
 
-<style>
+<style lang="scss">
 .blog-article {
   display: flex;
   justify-content: space-between;
@@ -50,23 +49,23 @@ function moreText(numArticle) {
 
 .blog-article-1 {
   margin-bottom: 100px;
-}
 
-.blog-article-1 .blog-article-content {
-  margin-right: 30px;
+  .blog-article-content {
+    margin-right: 30px;
+  }
 }
 
 .blog-article-2 {
   flex-direction: row-reverse;
   margin-bottom: 120px;
-}
 
-.blog-article-2 .blog-article-content {
-  text-align: right;
-}
+  .blog-article-content {
+    text-align: right;
+  }
 
-.blog-article-2 .blog-article-img {
-  margin-right: 30px;
+  .blog-article-img {
+    margin-right: 30px;
+  }
 }
 
 .blog-article h2 {
@@ -106,16 +105,16 @@ function moreText(numArticle) {
 
   /* Элемент скрыт в развернутой статье */
   display: none;
-}
 
-.more:hover {
-  text-decoration: none;
-  opacity: 0.5;
-}
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+  }
 
-.more:active {
-  text-decoration: none;
-  opacity: 0.3;
+  &:active {
+    text-decoration: none;
+    opacity: 0.3;
+  }
 }
 
 /* Сокращенное отображение статьи */

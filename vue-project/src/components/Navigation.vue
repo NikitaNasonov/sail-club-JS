@@ -57,26 +57,25 @@
 
 .site-navigation-item {
   margin-right: 30px;
-}
 
-.site-navigation-item:last-child {
-  margin-right: 0;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.site-navigation-item a {
-  font-size: 14px;
-  line-height: 18px;
-  color: #163152;
-  text-transform: uppercase;
-  text-decoration: none;
-}
+  a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #163152;
+    text-transform: uppercase;
+    text-decoration: none;
 
-.site-navigation-item a:hover {
-  color: rgba(22, 49, 82, 0.5);
-}
-
-.site-navigation-item a:active {
-  color: rgba(22, 49, 82, 0.3);
+    &:hover {
+      color: rgba(22, 49, 82, 0.5);
+    }
+    &:active {
+      color: rgba(22, 49, 82, 0.3);
+    }
+  }
 }
 
 .signin {
@@ -87,13 +86,12 @@
   height: 34px;
   border: 1px solid #00c6bd;
   border-radius: 50%;
-}
 
-.signin:hover {
-  opacity: 0.5;
-}
-
-.signin:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 </style>

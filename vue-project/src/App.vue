@@ -16,25 +16,15 @@ import Footer from './components/Footer.vue'
     <Navigation />
   </header>
   <main class="main-content">
-    <section class="hero">
-      <Hero />
-    </section>
+    <Hero />
     <Articles />
-    <section class="rent">
-      <Rent />
-    </section>
-    <section class="gallery">
-      <Gallery />
-    </section>
-    <section class="news">
-      <News />
-    </section>
-    <section class="contacts">
-      <Contacts />
-    </section>
+    <Rent />
+    <Gallery />
+    <News />
+    <Contacts />
   </main>
   <footer class="main-footer">
-    <Footer /> <!-- переделать компонет, выводить ссылки через v-for в шаблоне? -->
+    <Footer />
   </footer>
 </template>
 
