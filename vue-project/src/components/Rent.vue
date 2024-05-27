@@ -73,20 +73,19 @@ const cards = ref(cardsArr)
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  gap: 15px;
+  gap: 10px;
   padding: 0;
   margin: 0;
-  max-width: 800px;
   list-style: none;
 }
 
-.card-view-button-grid {
+@mixin card-view-button($img, $img-active) {
   width: 40px;
   height: 40px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
-  background-image: url("../assets/img/grid.svg");
+  background-image: url($img);
   border: 1px solid #00c6bd;
   border-radius: 50%;
   cursor: pointer;
@@ -98,30 +97,16 @@ const cards = ref(cardsArr)
     opacity: 0.3;
   }
   &.active {
-    background-image: url("../assets/img/grid-light.svg");
+    background-image: url($img-active);
   }
 }
 
-.card-view-button-list {
-  width: 40px;
-  height: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-image: url("../assets/img/list.svg");
-  border: 1px solid #00c6bd;
-  border-radius: 50%;
-  cursor: pointer;
+.card-view-button-grid {
+  @include card-view-button("../assets/img/grid.svg", "../assets/img/grid-light.svg");
+}
 
-  &:hover {
-    opacity: 0.5;
-  }
-  &:active {
-    opacity: 0.3;
-  }
-  &.active {
-    background-image: url("../assets/img/list-light.svg");
-  }
+.card-view-button-list {
+  @include card-view-button("../assets/img/list.svg", "../assets/img/list-light.svg");
 }
 
 .cards {

@@ -103,7 +103,6 @@ function changeFont(font) {
   margin: 0;
   margin-right: 30px;
   display: flex;
-  flex-wrap: wrap;
   
   li {
     margin-right: 10px;
@@ -114,7 +113,9 @@ function changeFont(font) {
   }
 }
 
-.theme-button-light {
+$theme-button-color: #00c6bd;
+
+@mixin theme-button($img, $img-active) {
   display: block;
   width: 32px;
   height: 32px;
@@ -122,8 +123,8 @@ function changeFont(font) {
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
-  background-image: url("../assets/img/sun.svg");
-  border: 1px solid #00c6bd;
+  background-image: url($img);
+  border: 1px solid $theme-button-color;
   border-radius: 50%;
   cursor: pointer;
 
@@ -134,32 +135,16 @@ function changeFont(font) {
     opacity: 0.3;
   }
   &.active {
-    background-image: url("../assets/img/sun-light.svg");
+    background-image: url($img-active);
   }
 }
 
-.theme-button-dark {
-  display: block;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  background-image: url("../assets/img/moon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: 1px solid #00c6bd;
-  border-radius: 50%;
-  cursor: pointer;
+.theme-button-light {
+  @include theme-button("../assets/img/sun.svg", "../assets/img/sun-light.svg");
+}
 
-  &hover {
-    opacity: 0.5;
-  }
-  &:active {
-    opacity: 0.3;
-  }
-  &.active {
-    background-image: url("../assets/img/moon-light.svg");
-  }
+.theme-button-dark {
+  @include theme-button("../assets/img/moon.svg", "../assets/img/moon-light.svg");
 }
 
 .fonts {
@@ -178,7 +163,7 @@ function changeFont(font) {
   }
 }
 
-.font-button-sans-serif {
+@mixin font-button {
   display: block;
   width: 32px;
   height: 32px;
@@ -186,7 +171,7 @@ function changeFont(font) {
   font-size: 16px;
   line-height: 14px;
   background-color: transparent;
-  border: 1px solid #00c6bd;
+  border: 1px solid $theme-button-color;
   border-radius: 50%;
   cursor: pointer;
 
@@ -198,24 +183,12 @@ function changeFont(font) {
   }
 }
 
-.font-button-serif {
-  display: block;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  font-family: "Philosopher", serif;
-  font-size: 16px;
-  line-height: 14px;
-  background-color: transparent;
-  border: 1px solid #00c6bd;
-  border-radius: 50%;
-  cursor: pointer;
+.font-button-sans-serif {
+  @include font-button;
+}
 
-  &:hover {
-    opacity: 0.5;
-  }
-  &:active {
-    opacity: 0.3;
-  }
+.font-button-serif {
+  font-family: "Philosopher", serif;
+  @include font-button;
 }
 </style>

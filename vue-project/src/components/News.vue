@@ -76,7 +76,6 @@
 }
 
 .post-content {
-
   h3 {
     margin-top: 33px;
     margin-bottom: 27px;

@@ -5,7 +5,7 @@
   </section>
 </template>
 
-<style>
+<style lang="scss">
 .hero {
   margin-bottom: 120px;
 

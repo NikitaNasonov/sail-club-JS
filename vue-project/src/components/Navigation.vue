@@ -29,7 +29,7 @@
   </nav>
 </template>
 
-<style>
+<style lang="scss">
 .main-nav {
   display: flex;
   align-items: center;

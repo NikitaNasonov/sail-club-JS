@@ -28,7 +28,7 @@ import Footer from './components/Footer.vue'
   </footer>
 </template>
 
-<style>
+<style lang="scss">
 /* Выделение активной кнопки */
 /* эти стили не работают, если находятся в main.css,
 хотя остальные работают */

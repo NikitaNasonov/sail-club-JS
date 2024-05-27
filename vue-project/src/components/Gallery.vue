@@ -35,7 +35,7 @@ function findActivePreview() {
   </section>
 </template>
 
-<style>
+<style lang="scss">
 .gallery {
   margin-bottom: 120px;
 
@@ -55,7 +55,6 @@ function findActivePreview() {
 
 .slider {
   display: flex;
-  align-items: flex-start;
 }
 
 .active-photo {
